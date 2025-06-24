@@ -36,13 +36,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }, str.length * 100 + 500);
   }
 
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && text) {
     type();
-  } else {
+  } else if (text) {
     text.textContent = 'human up.';
   }
 
-  // Reveal effect
+  // Intersection Observer for fade-in elements
+  const fadeSections = document.querySelectorAll('.scroll-fade');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -51,23 +52,48 @@ window.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.remove('visible');
       }
     });
+  }, {
+    threshold: 0.1
   });
-  document.querySelectorAll('.img-stagger').forEach(el => observer.observe(el));
-});
 
-// Scroll animation for hero logo
-window.addEventListener('scroll', () => {
+  fadeSections.forEach(el => observer.observe(el));
+
+  // Animate .img-stagger elements with delay
+  const staggerElements = document.querySelectorAll('.img-stagger');
+  staggerElements.forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, i * 150);
+  });
+
+  // Scroll animation for shrinking logo
   const logo = document.getElementById('hero-logo');
   const heroSection = document.getElementById('hero');
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollTop > heroSection.offsetHeight / 3) {
-    document.body.classList.add('has-shrink-padding');
-    heroSection.classList.add('shrink');
-    if (logo) logo.classList.add('shrink');
-  } else {
-    document.body.classList.remove('has-shrink-padding');
-    heroSection.classList.remove('shrink');
-    if (logo) logo.classList.remove('shrink');
-  }
+    if (scrollTop > heroSection.offsetHeight / 3) {
+      document.body.classList.add('has-shrink-padding');
+      heroSection.classList.add('shrink');
+      if (logo) logo.classList.add('shrink');
+    } else {
+      document.body.classList.remove('has-shrink-padding');
+      heroSection.classList.remove('shrink');
+      if (logo) logo.classList.remove('shrink');
+    }
+
+    // Optional parallax background
+    heroSection.style.backgroundPosition = `center ${scrollTop * 0.3}px`;
+  });
+
+  // Smooth anchor scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 });

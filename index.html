@@ -4,216 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LendInTandem</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Karma:wght@400;700&family=Italianno&family=Space+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-<!-- Replace your old <body> content with the following -->
-
 <body>
-  <header class="main-header">
-    <div class="logo"><img src="assets/lit.png" alt="LendInTandem Logo" class="logo-img">Lend<span class="scripted">In</span>Tandem</div>
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="#future">Future-Proofing</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#contract">Human Contract</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="burger" onclick="toggleMenu()">☰</div>
+
+  <!-- HERO -->
+  <header id="hero" class="snap-section">
+    <div class="hero-content">
+      <img src="assets/lit.png" alt="LendInTandem Logo" class="hero-logo" />
+      <h1 class="hero-title typewriter">a uniquely human co-pilot</h1>
+      <p class="hero-subtitle scroll-fade">AI that listens. Guides. Reveals nuance.</p>
+    </div>
   </header>
 
-  <nav class="mobile-nav" id="mobileMenu">
-    <a href="#mission">Mission</a>
-    <a href="#approach">Approach</a>
-    <a href="#solutions">Solutions</a>
-    <a href="#contract">Contract</a>
-  </nav>
-
-  <section id=\"hero\" class=\"snap-section\">
-  <img src=\"assets/lit.png\" alt=\"LendInTandem Logo\" id=\"hero-logo\">
-    <div class="hero-text">
-      <h1><span class="typewriter">hurray up.</span></h1>
-      <p>Two ears. One mouse. No time. We planned for that.</p>
-      <p class="subtext">A human-first AI co-pilot for Canadian lending teams. Smart. Empathetic. Compliant.</p>
-      <div class="graphic-placeholder">Animated: ‘human up.’ typing</div>
-    </div>
+  <!-- MISSION -->
+  <section id="mission" class="snap-section scroll-fade">
+    <h2>We help humans help humans</h2>
+    <p>It’s not another dashboard. It’s not an assistant for sales. It’s an AI co-pilot tuned for nuance, emotion, and human clarity — especially in complex lending decisions.</p>
   </section>
 
-  <section id="mission" class="snap-section">
-    <div class="content narrow">
-      <h2>Our Mission</h2>
-      <p>Advisors are overwhelmed, systems are disjointed, and the human touch gets lost in policy. LendinTandem exists to bridge the gap between empathy and efficiency.</p>
-      <blockquote class="pull-quote">We help advisors hear more, say less, and act with clarity.</blockquote>
-      <div class="graphic-placeholder">Split image: stressed advisor vs calm guided advisor</div>
-    </div>
+  <!-- APPROACH -->
+  <section id="approach" class="snap-section scroll-fade">
+    <h2>Our Approach</h2>
+    <ul>
+      <li>🧭 Real-time discovery prompts based on live convo</li>
+      <li>📜 Instant eligibility & policy navigation</li>
+      <li>🔍 Pattern detection across cases and queues</li>
+      <li>🧩 Frictionless integration with core banking tools</li>
+    </ul>
   </section>
 
-  <section id="approach" class="snap-section">
-    <div class="content wide">
-      <h2 class="white">How We Work</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Delivery Goal</h3>
-          <p>Instant, informed, and ethical advice support for frontline teams.</p>
-          <div class="graphic-placeholder">Dashboard UI: “client goal matched”</div>
-        </div>
-        <div class="card">
-          <h3>Technology</h3>
-          <p>Locally deployed, fine-tuned LLM agents with real-time dialogue understanding and policy mapping.</p>
-          <div class="graphic-placeholder">Advisor → AI → Policy Engine → Recommendation</div>
-        </div>
-        <div class="card">
-          <h3>Integration</h3>
-          <p>Designed for call centers, branch desktops, and hybrid agent use. Minimal setup, maximum compliance.</p>
-          <div class="graphic-placeholder">Icons: call, branch, chat, CRM</div>
-        </div>
-        <div class="card">
-          <h3>Core Values</h3>
-          <p>Human-first. Transparent. Helpful. Never replacing—always assisting.</p>
-          <div class="graphic-placeholder">Three hands over AI icon</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- SOLUTIONS -->
   <section id="solutions" class="snap-section">
     <div class="solution-row accent-1">
-      <div class="solution-col">
-        <h3>For Advisors</h3>
-        <p>Real-time empathy cues, tone feedback, and conversation support.</p>
-        <div class="graphic-placeholder">Speech bubble with tone meter</div>
+      <div class="solution-col scroll-fade">
+        <h3>Advisors</h3>
+        <p>Ask better questions. See the story behind the file. Focus your attention where it matters most.</p>
       </div>
-      <div class="solution-col">
-        <h3>For Managers</h3>
-        <p>Oversight without micromanagement. Policy adherence reports. Coaching cues.</p>
-        <div class="graphic-placeholder">Manager dashboard</div>
+      <div class="solution-col scroll-fade">
+        <h3>Managers</h3>
+        <p>Coach smarter. Spot trends. Identify risk or opportunity in real-time, not after the quarter ends.</p>
       </div>
     </div>
     <div class="solution-row accent-2">
-      <div class="solution-col">
-        <h3>For Compliance</h3>
-        <p>Transparent logic. Verint-friendly. No black box. Fully auditable prompts.</p>
-        <div class="graphic-placeholder">Checklist on transcript</div>
+      <div class="solution-col scroll-fade">
+        <h3>Clients</h3>
+        <p>Feel seen. Heard. Helped — not pushed. Lending advice that’s human-first.</p>
       </div>
-      <div class="solution-col">
-        <h3>For IT</h3>
-        <p>Runs locally. Optional VPC deployment. No ongoing SaaS lock-in.</p>
-        <div class="graphic-placeholder">On-prem/cloud toggle icon</div>
-      </div>
-    </div>
-    <div class="solution-row accent-1">
-      <div class="solution-col">
-        <h3>For Clients</h3>
-        <p>Faster help. Fewer transfers. More clarity. Even when things get emotional.</p>
-        <div class="graphic-placeholder">Happy client & clock</div>
+      <div class="solution-col scroll-fade">
+        <h3>Compliance</h3>
+        <p>Less risk. More transparency. Proof of intent, empathy, and consistent care.</p>
       </div>
     </div>
   </section>
 
-  <section id="future" class="snap-section">
-    <div class="content narrow">
-      <h2>Future-Proofing</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Adaptable to New Policies</h3>
-          <p>Drag-and-drop new policies or product rulesets without retraining the model.</p>
-          <div class="graphic-placeholder">JSON editor UI</div>
-        </div>
-        <div class="card">
-          <h3>Multilingual Ready</h3>
-          <p>Supports coaching and empathy cues across English, French, and more.</p>
-          <div class="graphic-placeholder">English/French toggle interface</div>
-        </div>
-        <div class="card">
-          <h3>Evolving with You</h3>
-          <p>Periodic model updates for Canadian context, bias mitigation, and product innovation.</p>
-          <div class="graphic-placeholder">Update ring: trust, empathy, fairness</div>
-        </div>
-      </div>
-    </div>
+  <!-- FUTURE-PROOFING -->
+  <section id="future" class="snap-section scroll-fade">
+    <h2>Built for Tomorrow</h2>
+    <ul>
+      <li>🪢 Adaptable to new products, policies, and priorities</li>
+      <li>🧬 Evolves with your people, not against them</li>
+      <li>🔁 Learns from your real conversations — securely</li>
+    </ul>
   </section>
 
-  <section id="security" class="snap-section">
-    <div class="content narrow">
-      <h2>Security & Value</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Security & Ownership</h3>
-          <p>Institution owns deployment. No external callouts. Full data privacy maintained.</p>
-          <div class="graphic-placeholder">Shield over institution logo</div>
-        </div>
-        <div class="card">
-          <h3>Deployment Partnership</h3>
-          <p>We handle onboarding, tuning, and internal support. You own the result.</p>
-          <div class="graphic-placeholder">AI–human handshake</div>
-        </div>
-        <div class="card">
-          <h3>Pricing & Licensing</h3>
-          <p>Flat-fee or per-advisor licensing. One-time tuning. Optional support retainer.</p>
-          <div class="graphic-placeholder">SaaS vs Local Ownership table</div>
-        </div>
-        <div class="card">
-          <h3>Trial Option</h3>
-          <p>90-day pilot available with sample call audio and risk scenarios.</p>
-          <div class="graphic-placeholder">Stamp: “Pilot Ready”</div>
-        </div>
-        <div class="card">
-          <h3>Support & Customization</h3>
-          <p>Fully customizable interface and tone model. Ongoing agent tuning available.</p>
-          <div class="graphic-placeholder">Customizer sliders</div>
-        </div>
-      </div>
-    </div>
+  <!-- SECURITY -->
+  <section id="security" class="snap-section scroll-fade">
+    <h2>Security & Ownership</h2>
+    <p>We don’t sell your data. We don’t call home. This system installs locally, runs on your rules, and aligns to your regulatory standards. It's yours — always.</p>
   </section>
 
-  <section id="contract" class="snap-section amber">
-    <div class="karma-quote">
-      <h2>Our Promise</h2>
-      <p>We will not replace human advisors. We build tools that honor their skill.</p>
-      <div class="graphic-placeholder">Contract with AI & human signatures</div>
-      <h3>Philosophy</h3>
-      <p>Better decisions are human decisions—just more informed, supported, and emotionally aware.</p>
-      <div class="graphic-placeholder">Tree roots into circuit board</div>
-      <h3>Our Values</h3>
-      <p>Empathy. Clarity. Integrity. Partnership.</p>
-      <div class="graphic-placeholder">Four pillars labeled with values</div>
-    </div>
+  <!-- VALUE -->
+  <section id="value" class="snap-section scroll-fade">
+    <h2>Value Model</h2>
+    <ul>
+      <li>📦 Transparent pricing — license or deploy</li>
+      <li>🧰 Fully customizable to your systems</li>
+      <li>🤝 Supported onboarding, your pace</li>
+    </ul>
   </section>
 
-  <section id="contact" class="snap-section">
-    <div class="content narrow">
-      <h2>Experience & Contact</h2>
-      <h3>Team & Story</h3>
-      <p>Built by a team of former advisors, managers, and credit coaches. We’ve been on your side of the desk.</p>
-      <div class="graphic-placeholder">Team collage or silhouette timeline</div>
-      <h3>Contact</h3>
-      <p>Book a demo, request an info pack, or just talk it through. We’re ready.</p>
-      <div class="graphic-placeholder">Email form or calendar booking</div>
-    </div>
+  <!-- HUMAN CONTRACT -->
+  <section id="contract" class="snap-section scroll-fade">
+    <h2>We Believe in the Human Contract</h2>
+    <p>Empathy is data. Respect is strategy. Service is a privilege. We build tech that honors the social contract behind every financial conversation.</p>
   </section>
 
-  <footer>
+  <!-- EXPERIENCE & STORY -->
+  <section id="story" class="snap-section scroll-fade">
+    <h2>Why We Built This</h2>
+    <p>We’ve sat in those chairs. We've coached those calls. This isn’t a product made in a lab — it’s the co-pilot we wished we had.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="snap-section scroll-fade">
+    <h2>Let’s Build Something Human</h2>
+    <p>Email: <a href="mailto:connect@lendintandem.ca">connect@lendintandem.ca</a></p>
+    <p>&copy; 2025 LendInTandem — Built by Roman Ulysses</p>
     <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Contact</a>
+      <a href="#hero">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#approach">Approach</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#contract">Values</a>
     </div>
-    <p>&copy; 2025 LendInTandem</p>
   </footer>
 
-  <button id="helpDot" onclick="openHelpModal()">?</button>
-
+  <!-- HELP DOT / MODAL -->
+  <button id="helpDot">?</button>
   <div id="helpModal" class="modal hidden">
     <div class="modal-content">
       <span class="close" onclick="closeHelpModal()">&times;</span>
-      <h2>Need Help?</h2>
-      <p>Let’s talk. We’re human too.</p>
+      <h3>Need Help?</h3>
+      <p>Scroll to explore the concept. Click sections in the footer to jump. This is just the beginning.</p>
     </div>
   </div>
 
-  <script src="script.js"></script>
 </body>
+</html>
